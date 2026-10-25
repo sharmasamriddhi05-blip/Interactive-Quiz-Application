@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="quiz">
+    <h1>Programming Quiz</h1>
+
+    <!-- ========== START SCREEN ========== -->
+    <section id="start-screen">
+      <p>Test your knowledge of basic programming and web development.</p>
+      <button id="start-btn" class="btn">Start quiz</button>
+    </section>
+
+    <!-- ========== QUESTION SCREEN ========== -->
+    <section id="question-screen" class="hidden">
+      <div class="top-row">
+        <span id="question-count"></span>
+        <span id="score-live"></span>
+      </div>
+
+      <div class="progress">
+        <div id="progress-bar"></div>
+      </div>
+
+      <h2 id="question-text"></h2>
+
+      <!-- Answer buttons are added here by script.js -->
+      <div id="options"></div>
+
+      <p id="feedback" aria-live="polite"></p>
+
+      <button id="next-btn" class="btn hidden">Next question</button>
+    </section>
+
+    <!-- ========== RESULT SCREEN ========== -->
+    <section id="result-screen" class="hidden">
+      <h2>Quiz finished!</h2>
+      <p id="final-score"></p>
+      <p id="result-message"></p>
+      <button id="restart-btn" class="btn">Try again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

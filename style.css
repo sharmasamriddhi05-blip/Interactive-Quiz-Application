@@ -1,0 +1,102 @@
+/* ========== BASICS ========== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f0f0fa;
+  color: #22223b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ========== QUIZ CARD ========== */
+.quiz {
+  background: #ffffff;
+  width: 100%;
+  max-width: 560px;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #6c5ce7;
+  margin-bottom: 20px;
+}
+
+h2 { margin: 18px 0; font-size: 1.3rem; }
+
+p { line-height: 1.5; }
+
+#start-screen, #result-screen { text-align: center; }
+#start-screen p { margin-bottom: 20px; }
+
+/* This class hides things. JavaScript adds and removes it. */
+.hidden { display: none; }
+
+/* ========== TOP ROW + PROGRESS BAR ========== */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #5c5c7a;
+  margin-bottom: 8px;
+}
+
+.progress {
+  height: 8px;
+  background: #e3e3ee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #6c5ce7;
+  transition: width 0.3s;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  padding: 10px 24px;
+  background: #6c5ce7;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 14px;
+}
+.btn:hover { opacity: 0.85; }
+
+#options { display: flex; flex-direction: column; gap: 10px; }
+
+.option-btn {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 1rem;
+  background: #f7f7fb;
+  border: 2px solid #e3e3ee;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #22223b;
+}
+.option-btn:hover:not(:disabled) { border-color: #6c5ce7; }
+
+/* Colors shown after you answer */
+.option-btn.correct { background: #d4f5dd; border-color: #2ecc71; }
+.option-btn.wrong   { background: #fbd9d9; border-color: #e74c3c; }
+.option-btn:disabled { cursor: default; }
+
+#feedback { margin-top: 14px; font-weight: 600; min-height: 24px; }
+#feedback.good { color: #1e9e4f; }
+#feedback.bad  { color: #d63031; }
+
+/* ========== RESULT SCREEN ========== */
+#final-score { font-size: 1.6rem; font-weight: 700; margin: 10px 0; }
+#result-message { color: #5c5c7a; }
